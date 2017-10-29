@@ -1,0 +1,28 @@
+<div class="gallery">
+
+    <input (keyup)="getSearchData($event)" type="search" id="search" name="search" placeholder="search for images, press Enter to search" /> 
+    
+   
+    <p class="message">{{message}}</p>
+
+
+      <div class="imgsContainer">
+        <div class="searchImgs" *ngFor="let result of resultArray; let i=index">
+       <img (click)="open2(i)" [defaultImage]="defaultImage" [lazyLoad]="result['url']" [offset]="offset" src={{result.url}}/>
+        </div>
+      </div>
+
+   <p class ="subtitle">latest pictures</p>
+ 
+   <div class="imgsContainer">
+     <!-- add the index for the lightbox, so it knows which picture to show -->
+    <div class="latest" *ngFor="let image of images; let i=index">
+  
+        <img (click)="open(i)" [defaultImage]="defaultImage" [lazyLoad]="image['url']"  src={{image.url}} />
+  
+    </div>  
+  </div>  
+  
+
+
+</div>  

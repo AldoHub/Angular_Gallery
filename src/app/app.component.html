@@ -1,0 +1,20 @@
+
+<div class="container">
+  
+    <nav>
+        <h3 class="menu">&#9776;</h3>
+          
+            <ul class="navMenu">
+              <li><a class="logo" target="_blank" href="http://www.splashbase.co/api">Powered By SplashBase</a></li>
+              <!-- routes for the components-->
+                <li><a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive ="active">Gallery</a></li>
+                <li><a routerLink="/videos" [routerLinkActiveOptions]="{exact: true}" routerLinkActive ="active">Videos</a></li>
+              <!-- routes for the components-->
+            </ul>
+      
+    </nav>
+      
+   <router-outlet></router-outlet>
+</div>
+  
+

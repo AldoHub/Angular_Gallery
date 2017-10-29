@@ -1,0 +1,19 @@
+<div class="videoGallery">
+  <p class ="subtitle">Latest  Short Videos</p>
+  
+  <div class="vidsContainer">
+    <!-- bind the function that uses the Router module
+      to get the current thumbnail clicked -->
+    <div (click)=onSelect(video) class="latestVids" *ngFor="let video of videos">
+<!--
+      <video poster={{video.url}}>
+      <source src="{{video.large_url}}" >
+     </video>
+    -->
+
+    <img src={{video.url}} />
+
+      </div>  
+  </div>  
+
+</div>  
