@@ -14,10 +14,6 @@
 
 <body>
  
- <header class="banner">
-    <h1>Angular Gallery</h1>
-    <p>A simple Angular 4 app.</p>
- </header> 
   <app-root></app-root>
  
 <footer>
@@ -55,11 +51,17 @@
  
 
 
-    $("body").on("click", ".menu", (e)=>{
-       let $this=$(e.target);
+  $("body").on("click", ".menu", (e)=>{
+      
       $(".navMenu").toggle();
-     });
+  });
   
+ 
+
+  
+  $("body").on("click", "#collapse", (e)=>{
+     $(".collapse").toggle();
+  }); 
 
  });
  

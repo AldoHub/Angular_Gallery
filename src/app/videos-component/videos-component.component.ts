@@ -46,6 +46,7 @@ export class VideosComponentComponent implements OnInit {
   }
 
 
+
   ngOnInit() {
   this.getLatestVideos();
   }

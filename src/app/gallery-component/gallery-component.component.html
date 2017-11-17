@@ -1,18 +1,22 @@
 <div class="gallery">
 
     <input (keyup)="getSearchData($event)" type="search" id="search" name="search" placeholder="search for images, press Enter to search" /> 
+       
+    <div *ngIf="show" id="message" class="message">
+      <p> {{ message}}</p>
+      <p id="collapse">Hide / Show</p>
+    </div>
+<div>
     
-   
-    <p class="message">{{message}}</p>
-
-
+    <div class="collapse">
       <div class="imgsContainer">
         <div class="searchImgs" *ngFor="let result of resultArray; let i=index">
        <img (click)="open2(i)" [defaultImage]="defaultImage" [lazyLoad]="result['url']" [offset]="offset" src={{result.url}}/>
         </div>
       </div>
-
-   <p class ="subtitle">latest pictures</p>
+    </div>  
+</div>   
+    <p class ="subtitle">latest pictures</p>
  
    <div class="imgsContainer">
      <!-- add the index for the lightbox, so it knows which picture to show -->

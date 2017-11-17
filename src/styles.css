@@ -1,15 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/angular2-lightbox/lightbox.css";
 
-* {
-    margin: 0;
-    padding: 0;
-
-}
 
 body {
     background: #ddd;
-    color:#eee;
+    color:#111;
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
@@ -22,66 +17,55 @@ body * {
 }
 .container {
     text-align: center;
-    margin: 0 auto 100px auto;
+    margin: 0 auto ;
     
     
 }
 
-header {
-padding:0;
-color: #111;
-margin: 0;
-font-size: 20px;
-font-family: "Comfortaa";
-text-align: center;
-
-
+.menu {
+    padding: 0;
+    margin: 0;
 }
 
-
-header h1 {
-    padding-top: 70px;
+header h1 , header p {
     display: none;
 }
 
-header p {
-display: none;
-}
-
 nav {
-   
-    position: relative;
+   padding: 0;
+   margin: 0;
+   position: fixed;
+   width: 100%;
+   max-width: 1200px;
+
  
 }
 
 nav ul {
-   
    width: 100%;
+   padding:0;
+   margin: 0;
    background: #6CCC05;
 }
 nav ul li {
-    font-weight: bold;
-    list-style: none; 
-     display: inline-block;
-     padding: 0px;
-     margin-left: 0px;
-     
-     }
-
-
+   
+    margin-left: 0px;
+    display: inline-block;        
+    
+    
+}
 
 nav ul li a{
-    padding: 12px;
-    display: block;
+    color: aliceblue;
     margin: 0;
-    color: #111;
-    text-decoration: none;
-
+    text-decoration:none;
+    display: block;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover, .active {
-    background: #111;
-    color: #6CCC05;
+   background: #111;
+   color: #6CCC05;
 
 }
 
@@ -107,13 +91,22 @@ video {
     
 }
 
+#collapse {
+    background: #222;
+    color: #eee;
+    padding: 10px;
+    width: 30%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
 footer {
     border-top: 1px solid #555;
-    width: 95%;
+    width: 55%;
     color: #555;
     text-align: center;
-    padding: 20px 0;
-    margin: 0 auto;
+    padding: 10px 0;
+    margin: 10px auto;
   
  
   }
@@ -138,9 +131,9 @@ footer a {
 
 
  .latest, .searchImgs, .latestVids {
-     width: 100%;
+     width: 90%;
      display: inline-table;
-     margin: 0;
+     margin: 0 0 5px 0;
      height: auto;
     padding: 0px;
    
@@ -155,7 +148,7 @@ footer a {
 
 .latest img:hover, .searchImgs img:hover, .latestVids img:hover{
    cursor: pointer;
-    
+   outline:#111 solid 1px; 
 }
 
 .subtitle {
@@ -230,6 +223,7 @@ width: 100%;
         
         text-align: center;
     }
+    
     nav ul li{
         display: block;
         text-align: center;
@@ -277,13 +271,10 @@ width: 100%;
     }
     
 
-
-    
 nav {
     width: 100%;
-    top: 0;
-    
 }
+    
 
 .active {
     background: #6CCC05;

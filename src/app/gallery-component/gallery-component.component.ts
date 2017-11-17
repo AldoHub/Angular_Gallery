@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {Http} from "@angular/http";
 import { Lightbox } from 'angular2-lightbox';
 
-
 interface Images{
 id: number,
 url: string
@@ -33,6 +32,7 @@ export class GalleryComponentComponent implements OnInit {
   searchArray: any[]
   images: Images[]
 
+  show: boolean = false
  
   // get the images from the API, we should get the latest everytime we start the app
   getImages(){
@@ -81,7 +81,6 @@ export class GalleryComponentComponent implements OnInit {
     this.search=this.value;
 
     
-    
     //do the request
     this.httpClient.get<[searchResult]>("http://www.splashbase.co/api/v1/images/search?query=" + this.search ).subscribe((response)=>{
      //the data is inside an object "images"
@@ -106,7 +105,7 @@ export class GalleryComponentComponent implements OnInit {
 
         //array for the lightbox
         this.searchArray.push(images2); 
-
+        this.show= true;
 
      })
     }
